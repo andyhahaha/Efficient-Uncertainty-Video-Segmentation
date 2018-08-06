@@ -87,6 +87,7 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
 
 - Tiramisu MC dropout N=5(we use N=5 result because the same inference time as RTA-MC.)
     - Performance
+    
         |  | Accuracy |
         |-------|:-----:|
         | Global Accuracy   |  89.3  |
@@ -96,6 +97,7 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
     - PR-Curve
         ![Alt text](/images/MC_PR.PNG)
     - Ranking IOU of Variational Ratio
+    
         | Percentage | Ranking IOU |
         |-------|:-----:|
         | 10%   |  43.4  |
@@ -106,6 +108,7 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
     
 - Tiramisu TA-MC
     - Performance
+    
         |  | Accuracy(%) |
         |-------|:-----:|
         | Global Accuracy   |  89.6  |
@@ -114,6 +117,7 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
     - PR-Curve
         ![Alt text](/images/TA-MC_PR.PNG)
     - Ranking IOU of Variational Ratio
+    
         | Percentage | Ranking IOU |
         |-------|:-----:|
         | 10%   |  34.8  |
@@ -122,6 +126,7 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
         | 70%  |   87.0   |
 - Tiramisu RTA-MC
     - Performance
+    
         |  | Accuracy(%) |
         |-------|:-----:|
         | Global Accuracy   |  89.6  |
@@ -130,6 +135,7 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
     - PR-Curve
         ![Alt text](/images/RTA-MC_PR.png)
     - Ranking IOU of Variational Ratio
+    
         | Percentage | Ranking IOU |
         |-------|:-----:|
         | 10%   |  43.4  |
