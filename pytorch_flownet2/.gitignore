@@ -1,10 +1,2 @@
 __pycache__/
-*.o
-*.so
-*.so.dSYM
-
 *.pyc
-.torch
-
-work
-work/*
