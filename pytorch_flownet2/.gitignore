@@ -2,11 +2,9 @@ __pycache__/
 *.o
 *.so
 *.so.dSYM
-pretrained
 
 *.pyc
 .torch
-_ext
+
 work
 work/*
-_ext/
