@@ -12,9 +12,12 @@ This is the official codes for the paper: [Efficient Uncertainty Estimation for 
 - [Opencv](https://anaconda.org/conda-forge/opencv)
 
 ## CamVid dataset
-Normall CamVid dataset can download from [here](https://github.com/alexgkendall/SegNet-Tutorial).
+Normall CamVid dataset only contain frames that fps=1.
 
-However, our Method leverage consecutive frames to speed up uncertainty estimation. Therefore we need a CamVid dataset contain all consecutive frames(fps 30) instead of labeled frames(fps 1).
+However, our Method leverage consecutive frames to speed up uncertainty estimation. 
+
+Therefore we need a CamVid dataset contain all consecutive frames(fps 30) instead of labeled frames(fps 1).
+
 We extract fps 30 frames from original videos and build new version [here](https://drive.google.com/file/d/13IJqu2nTaFbYPaT3IhoCjH7dte-gbSSz/view?usp=sharing)
 
 Download and unzip the dataset
@@ -30,14 +33,19 @@ Edit config.json
 
 ## Optical flow installation
 We use the [FlowNet2](https://github.com/vt-vl-lab/pytorch_flownet2) as our optical flow model.
+
 The FlowNet2 code is intergret in our repo. 
-You should do the installation in this repo [FlowNet2](https://github.com/vt-vl-lab/pytorch_flownet2).
+
+You only need do the installation in this repo [FlowNet2](https://github.com/vt-vl-lab/pytorch_flownet2).
+
 Download the [pretrained](https://drive.google.com/file/d/1hF8vS6YeHkx3j2pfCeQqqZGwA_PJq_Da/view?usp=sharing) weight in Dir : pytorch_flownet2/FlowNet2_src/pretrained
 
 
 ## Trained model
-Our trained tiramisu model can be download [here](https://drive.google.com/file/d/1bUpaZoTugeVs4zK31MLVe3jrL5ILdQ4n/view?usp=sharing)
+Our trained tiramisu model can be download [here](https://drive.google.com/file/d/1bUpaZoTugeVs4zK31MLVe3jrL5ILdQ4n/view?usp=sharing).
+
 Download and unzip it at checkpoint dir. Then run exp_test_MC.py and python exp_test_RTA.py.
+
 Then it can evaluate our release model.
 
 
@@ -103,6 +111,7 @@ Then it can evaluate our release model.
         | Mean IOU          |  62.6    |
 
     - PR-Curve
+    
         ![Alt text](/images/MC_PR.PNG)
     - Ranking IOU of Variational Ratio
     
@@ -123,6 +132,7 @@ Then it can evaluate our release model.
         | Mean Accuracy     | 73.5   |
         | Mean IOU          |  62.2    |
     - PR-Curve
+    
         ![Alt text](/images/TA-MC_PR.PNG)
     - Ranking IOU of Variational Ratio
     
@@ -141,6 +151,7 @@ Then it can evaluate our release model.
         | Mean Accuracy     |  74.2 |
         | Mean IOU          |   62.6   |
     - PR-Curve
+    
         ![Alt text](/images/RTA-MC_PR.png)
     - Ranking IOU of Variational Ratio
     
