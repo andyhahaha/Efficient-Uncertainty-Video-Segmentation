@@ -28,9 +28,17 @@ Edit config.json
 }
 ```
 
-## Pretrained model
-To use our Temporal aggregation method, we need a optical flow model. We use the [FlowNet2](https://github.com/vt-vl-lab/pytorch_flownet2) as our optical flow model.
-The FlowNet2 code is intergret in our repo. Download the [pretrained](https://drive.google.com/file/d/1hF8vS6YeHkx3j2pfCeQqqZGwA_PJq_Da/view?usp=sharing) weight in Dir : pytorch_flownet2/FlowNet2_src/pretrained
+## Optical flow installation
+We use the [FlowNet2](https://github.com/vt-vl-lab/pytorch_flownet2) as our optical flow model.
+The FlowNet2 code is intergret in our repo. 
+You should do the installation in this repo [FlowNet2](https://github.com/vt-vl-lab/pytorch_flownet2).
+Download the [pretrained](https://drive.google.com/file/d/1hF8vS6YeHkx3j2pfCeQqqZGwA_PJq_Da/view?usp=sharing) weight in Dir : pytorch_flownet2/FlowNet2_src/pretrained
+
+
+## Trained model
+Our trained tiramisu model can be download [here](https://drive.google.com/file/d/1bUpaZoTugeVs4zK31MLVe3jrL5ILdQ4n/view?usp=sharing)
+Download and unzip it at checkpoint dir. Then run exp_test_MC.py and python exp_test_RTA.py.
+Then it can evaluate our release model.
 
 
 ## Train script
@@ -142,12 +150,6 @@ The FlowNet2 code is intergret in our repo. Download the [pretrained](https://dr
         | 30%     |   65.2 |
         | 50%  |  77.6    |
         | 70%  |  86.4    |
-## Trained model
-Our trained tiramisu model can be download [here](https://drive.google.com/file/d/1bUpaZoTugeVs4zK31MLVe3jrL5ILdQ4n/view?usp=sharing)
-Download and unzip it at checkpoint dir. Then edit one variable in exp_test_MC.py and python exp_test_RTA.py.
-```
-description = 'lr0.001_b4_trained'
-```
-Then it can evaluate our release model.
+
 
 
