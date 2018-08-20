@@ -30,6 +30,10 @@ from ptsemseg.loss import cross_entropy2d
 import pdb
 
 def set_dropout(m):
+    if type(m) == nn.Dropout:
+        m.train()
+
+def set_dropout2d(m):
     if type(m) == nn.Dropout2d:
         m.train()
 
@@ -96,7 +100,10 @@ def validate_bayesian(args, model, split, labeled_index=None, verbose=False):
 
     # Setup Model
     model.eval()
-    model.apply(set_dropout)
+    if args.arch == 'bayesian_segnet':
+        model.apply(set_dropout)
+    elif args.arch == 'bayesian_tiramisu':
+        model.apply(set_dropout2d) 
 
     # Uncertainty Hyperparameter
     T = args.sample_num
@@ -185,7 +192,11 @@ def validate_video(args, model, split, labeled_index=None, verbose=False):
 
     # Setup Model
     model.eval()
-    model.apply(set_dropout)
+
+    if args.arch == 'bayesian_segnet':
+        model.apply(set_dropout)
+    elif args.arch == 'bayesian_tiramisu':
+        model.apply(set_dropout2d)
 
     # Optical Flow
     if args.flow == 'DF':
